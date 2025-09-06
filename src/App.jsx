@@ -58,8 +58,8 @@ const AppStyles = () => (
             z-index: 9999;
         }
         .splash-screen img {
-            width: auto;
-            height: 98%;
+            width: 100%;
+            height: auto;
             object-fit: contain;
         }
 
