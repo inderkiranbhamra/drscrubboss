@@ -133,25 +133,25 @@ const jobs = [
         id: 1,
         customer: "Melvin | Hyundai Creta",
         service: "Basic Car Wash",
-        dateTime: "Sep 7, 2025 - 8:00 AM",
+        dateTime: "Sep 6, 2025 - 6:00 AM",
     },
     {
         id: 2,
         customer: "Prakash | Hero Splendor",
         service: "Premium Bike Wash",
-        dateTime: "Sep 7, 2025 - 9:30 AM",
+        dateTime: "Sep 6, 2025 - 6:00 AM",
     },
     {
         id: 3,
         customer: "Rajesh | KTM 160 Duke",
         service: "Premium Bike Wash",
-        dateTime: "Sep 7, 2025 - 11:00 AM",
+        dateTime: "Sep 6, 2025 - 6:00 AM",
     },
     {
         id: 4,
         customer: "John | Royal Enfield Hunter 350",
         service: "Premium Bike Wash",
-        dateTime: "Sep 7, 2025 - 1:00 PM",
+        dateTime: "Sep 6, 2025 - 6:00 AM",
     },
 ];
 
