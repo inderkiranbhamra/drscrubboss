@@ -18,31 +18,28 @@ const HomeStyles = () => (
         .home-screen-container {
             background-color: #F3F4F6;
             padding: 0;
-            padding-bottom: 50px;
+            padding-bottom: 80px;
         }
         .home-header-bg {
             background-image: linear-gradient(to bottom, rgba(67, 56, 202, 0.95), rgba(67, 56, 202, 0.8)), url('https://images.pexels.com/photos/7293739/pexels-photo-7293739.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
             background-size: cover;
             background-position: center;
-            padding: 40px 15px 35px 15px;
-            /* Removed bottom border-radius to make it rectangular */
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
+            padding: 25px 15px; 
             color: white;
         }
         .header-top-row {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 25px;
+            margin-bottom: 20px; 
         }
         .header-greeting {
-            font-size: 28px;
+            font-size: 24px; 
             font-weight: 700;
             margin: 4px 0 0;
         }
         .header-sub-greeting {
-            font-size: 16px;
+            font-size: 14px; 
             font-weight: 400;
             margin: 0;
             opacity: 0.9;
@@ -52,19 +49,18 @@ const HomeStyles = () => (
             background-color: rgba(255, 255, 255, 0.2);
             border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 12px;
-            padding: 15px;
+            padding: 12px 15px; 
             display: flex;
             justify-content: space-between;
             align-items: center;
             backdrop-filter: blur(5px);
         }
-        .location-title { margin: 0; font-weight: 500; font-size: 16px; }
-        .location-address { margin: 4px 0 0; font-size: 14px; opacity: 0.8; }
+        .location-title { margin: 0; font-weight: 500; font-size: 15px; }
+        .location-address { margin: 2px 0 0; font-size: 13px; opacity: 0.8; }
         .location-arrow { font-size: 16px; opacity: 0.8; }
         .home-content-area {
-            padding: 20px 15px;
-            /* Increased negative margin to pull content higher, effectively making the header background rectangular and not "near" the boxes */
-            margin-top: -50px; /* Adjusted to overlap the header more */
+            padding: 0 15px;
+            margin-top: -30px; 
             position: relative;
             z-index: 2;
         }
@@ -72,25 +68,25 @@ const HomeStyles = () => (
         .stat-card {
             flex: 1;
             background-color: #fff;
-            padding: 20px 15px;
+            padding: 15px; 
             border-radius: 16px;
             text-align: center;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
         }
-        .stat-label { margin: 0 0 8px 0; color: var(--text-light); font-size: 14px; }
-        .stat-number { font-size: 36px; font-weight: 700; color: var(--text-dark); margin: 0; }
-        .section-title { font-size: 16px; font-weight: 500; margin-top: 25px; margin-bottom: 15px; color: var(--text-dark); }
+        .stat-label { margin: 0 0 5px 0; color: var(--text-light); font-size: 13px; }
+        .stat-number { font-size: 32px; /* Reduced font size */ font-weight: 700; color: var(--text-dark); margin: 0; }
+        .section-title { font-size: 16px; font-weight: 500; margin-top: 20px; margin-bottom: 12px; color: var(--text-dark); }
         .job-item-card {
             background-color: #fff;
             border-radius: 16px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
-            padding: 15px;
+            padding: 12px; 
         }
-        .job-item-top { display: flex; align-items: center; gap: 15px; }
+        .job-item-top { display: flex; align-items: center; gap: 12px; }
         .job-image {
-            width: 80px;
-            height: 65px;
+            width: 70px;
+            height: 55px;
             object-fit: contain;
             background-color: #f7f7f7;
             border-radius: 8px;
@@ -98,17 +94,17 @@ const HomeStyles = () => (
             padding: 5px;
         }
         .job-details { flex-grow: 1; }
-        .job-customer { font-weight: 600; margin: 0; font-size: 16px; color: var(--text-dark); }
-        .job-service { color: var(--text-light); margin: 4px 0 0; font-size: 14px; }
+        .job-customer { font-weight: 600; margin: 0; font-size: 15px; color: var(--text-dark); }
+        .job-service { color: var(--text-light); margin: 3px 0 0; font-size: 13px; }
         .job-menu-icon { color: var(--text-light); font-size: 20px; }
         .job-item-bottom {
             display: flex;
-            gap: 15px;
-            margin-top: 15px;
+            gap: 12px;
+            margin-top: 12px; 
         }
         .btn-details, .btn-accept {
             flex: 1;
-            padding: 12px;
+            padding: 10px; 
             border-radius: 25px;
             cursor: pointer;
             font-weight: 600;
@@ -128,24 +124,24 @@ const HomeStyles = () => (
 );
 
 const jobRequests = [
-  {
-    id: 1,
-    customer: "Melvin | Hyundai Creta",
-    service: "Basic Car Wash",
-    image: "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Creta/8667/1755765115423/front-left-side-47.jpg" // Using a transparent background image
-  },
-  {
-    id: 2,
-    customer: "Prakash | Suzuki Swift",
-    service: "Premium Car Wash",
-    image: "https://imgd.aeplcdn.com/664x374/n/cw/ec/159099/swift-exterior-right-front-three-quarter-31.jpeg" // Using a transparent background image
-  },
-  {
-    id: 3,
-    customer: "Praveen | Mahindra Thar",
-    service: "Premium Car Wash",
-    image: "https://imgd.aeplcdn.com/664x374/n/cw/ec/124839/thar-roxx-exterior-left-front-three-quarter-3.jpeg" // Using a transparent background image
-  }
+    {
+        id: 1,
+        customer: "Melvin | Hyundai Creta",
+        service: "Basic Car Wash",
+        image: "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Creta/8667/1755765115423/front-left-side-47.jpg"
+    },
+    {
+        id: 2,
+        customer: "Prakash | Suzuki Swift",
+        service: "Premium Car Wash",
+        image: "https://imgd.aeplcdn.com/664x374/n/cw/ec/159099/swift-exterior-right-front-three-quarter-31.jpeg"
+    },
+    {
+        id: 3,
+        customer: "Praveen | Mahindra Thar",
+        service: "Premium Car Wash",
+        image: "https://imgd.aeplcdn.com/664x374/n/cw/ec/124839/thar-roxx-exterior-left-front-three-quarter-3.jpeg"
+    }
 ];
 
 function HomeScreen() {
@@ -170,8 +166,8 @@ function HomeScreen() {
                     </div>
                 </div>
                 <div className="home-content-area">
-                  <br></br>
-                  <br></br>
+                    <br></br>
+                    <br></br>
                     <div className="job-stats">
                         <div className="stat-card">
                             <p className="stat-label">Job Assigned</p>

@@ -23,6 +23,7 @@ const JobScreenStyles = () => (
             padding: 0;
             background-color: var(--bg-light);
             min-height: 100vh;
+            padding-bottom: 80px; 
         }
 
         .top-nav-tabs {
@@ -36,7 +37,7 @@ const JobScreenStyles = () => (
         .tab-item {
             flex: 1;
             text-align: center;
-            padding: 15px 0;
+            padding: 13px 0; 
             font-size: 15px;
             font-weight: 500;
             color: var(--text-light);
@@ -61,14 +62,14 @@ const JobScreenStyles = () => (
         }
 
         .job-list-area {
-            padding: 20px 15px;
+            padding: 15px; 
         }
 
         .job-card {
             background-color: #fff;
             border-radius: 16px;
-            padding: 15px;
-            margin-bottom: 15px;
+            padding: 12px; 
+            margin-bottom: 12px; 
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
 
@@ -76,11 +77,11 @@ const JobScreenStyles = () => (
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 8px;
+            margin-bottom: 5px; 
         }
 
         .job-title {
-            font-size: 16px;
+            font-size: 15px; 
             font-weight: 600;
             color: var(--text-dark);
             margin: 0;
@@ -94,7 +95,7 @@ const JobScreenStyles = () => (
         .job-subtitle {
             font-size: 13px;
             color: var(--text-light);
-            margin: 0 0 15px 0;
+            margin: 0 0 12px 0; 
         }
 
         .job-buttons {
@@ -105,11 +106,11 @@ const JobScreenStyles = () => (
         .btn-view-details,
         .btn-start {
             flex: 1;
-            padding: 12px;
-            border-radius: 25px; /* Pill shape */
+            padding: 10px; 
+            border-radius: 25px;
             cursor: pointer;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 13px;
             border: none;
             transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
         }
@@ -132,25 +133,25 @@ const jobs = [
         id: 1,
         customer: "Melvin | Hyundai Creta",
         service: "Basic Car Wash",
-        dateTime: "Sep 6, 2025 - 6:00 AM",
+        dateTime: "Sep 7, 2025 - 8:00 AM",
     },
     {
         id: 2,
         customer: "Prakash | Hero Splendor",
         service: "Premium Bike Wash",
-        dateTime: "Sep 6, 2025 - 6:00 AM",
+        dateTime: "Sep 7, 2025 - 9:30 AM",
     },
     {
         id: 3,
         customer: "Rajesh | KTM 160 Duke",
         service: "Premium Bike Wash",
-        dateTime: "Sep 6, 2025 - 6:00 AM",
+        dateTime: "Sep 7, 2025 - 11:00 AM",
     },
     {
         id: 4,
         customer: "John | Royal Enfield Hunter 350",
         service: "Premium Bike Wash",
-        dateTime: "Sep 6, 2025 - 6:00 AM",
+        dateTime: "Sep 7, 2025 - 1:00 PM",
     },
 ];
 
@@ -181,8 +182,6 @@ function JobScreen() {
                         </div>
                     ))}
                 </div>
-                <br></br>
-                <br></br>
             </div>
         </>
     );

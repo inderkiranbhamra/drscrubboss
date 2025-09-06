@@ -8,7 +8,7 @@ const EarningsScreenStyles = () => (
             --text-light: #6B7280;
             --border-light: #E5E7EB;
             --bg-light: #F3F4F6;
-            --success-color: #10B981; /* Green for success */
+            --success-color: #10B981; 
         }
 
         body {
@@ -23,13 +23,14 @@ const EarningsScreenStyles = () => (
             padding: 0;
             background-color: var(--bg-light);
             min-height: 100vh;
+            padding-bottom: 80px; 
         }
 
         .earnings-header-bg {
             background-image: linear-gradient(to bottom, rgba(67, 56, 202, 0.95), rgba(67, 56, 202, 0.8)), url('https://static.vecteezy.com/system/resources/thumbnails/049/965/031/small_2x/hand-painted-horizontal-landscape-illustration-of-the-city-under-the-blue-and-purple-sky-free-vector.jpg');
             background-size: cover;
             background-position: center;
-            padding: 40px 15px 35px 15px;
+            padding: 25px 15px; 
             color: white;
             text-align: center;
         }
@@ -37,19 +38,19 @@ const EarningsScreenStyles = () => (
         .balance-label {
             font-size: 14px;
             font-weight: 400;
-            margin: 0 0 8px 0;
+            margin: 0 0 5px 0; 
             opacity: 0.8;
         }
 
         .balance-amount {
-            font-size: 36px;
+            font-size: 32px; 
             font-weight: 700;
             margin: 0;
         }
 
         .payment-history-section {
-            padding: 20px 15px;
-            margin-top: -25px;
+            padding: 15px; 
+            margin-top: -20px; 
             position: relative;
             z-index: 2;
         }
@@ -58,18 +59,17 @@ const EarningsScreenStyles = () => (
             font-size: 16px;
             font-weight: 500;
             margin-top: 0;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             color: var(--text-dark);
         }
 
         .transaction-card {
             background-color: #fff;
             border-radius: 12px;
-            padding: 15px;
-            margin-bottom: 12px;
-            /* Adjusted box-shadow and added green border-left */
-            box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08); /* More subtle shadow */
-            border-left: 5px solid var(--success-color); /* Green left border */
+            padding: 12px 15px;
+            margin-bottom: 10px; 
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            border-left: 5px solid var(--success-color);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -82,7 +82,7 @@ const EarningsScreenStyles = () => (
         }
 
         .transaction-id {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 600;
             color: var(--text-dark);
             margin: 0;
@@ -91,7 +91,7 @@ const EarningsScreenStyles = () => (
         .transaction-date {
             font-size: 13px;
             color: var(--text-light);
-            margin: 4px 0 0 0;
+            margin: 3px 0 0 0; 
         }
 
         .transaction-right {
@@ -102,7 +102,7 @@ const EarningsScreenStyles = () => (
         }
 
         .transaction-amount {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 600;
             color: var(--success-color);
             margin: 0;
@@ -111,7 +111,7 @@ const EarningsScreenStyles = () => (
         .transaction-status {
             font-size: 13px;
             color: var(--text-light);
-            margin: 4px 0 0 0;
+            margin: 3px 0 0 0; 
         }
 
         .transaction-type {
@@ -127,6 +127,7 @@ const EarningsScreenStyles = () => (
     `}</style>
 );
 
+// --- ORIGINAL DATA RESTORED ---
 const transactions = [
     {
         id: "32902",
@@ -188,9 +189,8 @@ function EarningsScreen() {
                     <p className="balance-label">Your Balance is</p>
                     <p className="balance-amount">₹4500.50</p>
                 </div>
-
+                <br></br>
                 <div className="payment-history-section">
-                  <br></br>
                     <h3 className="section-title">Payment History</h3>
                     {transactions.map(transaction => (
                         <div key={transaction.id} className="transaction-card">
@@ -206,8 +206,6 @@ function EarningsScreen() {
                             </div>
                         </div>
                     ))}
-                    <br></br>
-                    <br></br>
                 </div>
             </div>
         </>
