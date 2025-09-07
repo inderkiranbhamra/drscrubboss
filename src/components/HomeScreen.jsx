@@ -9,6 +9,7 @@ const HomeStyles = () => (
             --primary-color: #2563EB;
             --text-dark: #1F2937;
             --text-light: #6B7280;
+            --border-light: #E5E7EB;
         }
         body {
             background-color: #F3F4F6;
@@ -74,15 +75,34 @@ const HomeStyles = () => (
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
         }
         .stat-label { margin: 0 0 5px 0; color: var(--text-light); font-size: 13px; }
-        .stat-number { font-size: 32px; /* Reduced font size */ font-weight: 700; color: var(--text-dark); margin: 0; }
-        .section-title { font-size: 16px; font-weight: 500; margin-top: 20px; margin-bottom: 12px; color: var(--text-dark); }
-        .job-item-card {
+        .stat-number { font-size: 32px; font-weight: 700; color: var(--text-dark); margin: 0; }
+        
+        .job-request-container {
             background-color: #fff;
             border-radius: 16px;
-            margin-bottom: 12px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
-            padding: 12px; 
+            padding: 15px;
+            margin-top: 20px;
         }
+        .section-title { 
+            font-size: 16px; 
+            font-weight: 500; 
+            margin-top: 0;
+            margin-bottom: 15px; 
+            color: var(--text-dark); 
+        }
+        
+        .dashed-separator {
+            border: 0;
+            border-top: 2px dashed var(--border-light);
+            margin: 15px 0;
+        }
+        .solid-separator {
+            border: 0;
+            border-top: 2px solid var(--border-light);
+            margin: 15px 0;
+        }
+
         .job-item-top { display: flex; align-items: center; gap: 12px; }
         .job-image {
             width: 70px;
@@ -134,13 +154,13 @@ const jobRequests = [
         id: 2,
         customer: "Prakash | Suzuki Swift",
         service: "Premium Car Wash",
-        image: "https://imgd.aeplcdn.com/664x374/n/cw/ec/159099/swift-exterior-right-front-three-quarter-31.jpeg"
+        image: "https://www.cartoq.com/wp-content/uploads/2023/11/2024-Maruti-Suzuki-Swift-pure-white-color.jpg"
     },
     {
         id: 3,
         customer: "Praveen | Mahindra Thar",
         service: "Premium Car Wash",
-        image: "https://imgd.aeplcdn.com/664x374/n/cw/ec/124839/thar-roxx-exterior-left-front-three-quarter-3.jpeg"
+        image: "https://mda.spinny.com/sp-file-system/public/2025-08-25/2b1c7d3383224778aa89689c99602a0a/raw/file.JPG"
     }
 ];
 
@@ -178,23 +198,30 @@ function HomeScreen() {
                             <p className="stat-number">1</p>
                         </div>
                     </div>
-                    <h3 className="section-title">New Job Requests</h3>
-                    <div className="job-card-list">
-                        {jobRequests.map(job => (
-                            <div key={job.id} className="job-item-card">
-                                <div className="job-item-top">
-                                    <img src={job.image} alt={job.customer} className="job-image" />
-                                    <div className="job-details">
-                                        <p className="job-customer">{job.customer}</p>
-                                        <p className="job-service">{job.service}</p>
+
+                    <div className="job-request-container">
+                        <h3 className="section-title">New Job Requests</h3>
+                        <hr className="dashed-separator" />
+                        {jobRequests.map((job, index) => (
+                            <React.Fragment key={job.id}>
+                                <div>
+                                    <div className="job-item-top">
+                                        <img src={job.image} alt={job.customer} className="job-image" />
+                                        <div className="job-details">
+                                            <p className="job-customer">{job.customer}</p>
+                                            <p className="job-service">{job.service}</p>
+                                        </div>
+                                        <BsThreeDotsVertical className="job-menu-icon" />
                                     </div>
-                                    <BsThreeDotsVertical className="job-menu-icon" />
+                                    <div className="job-item-bottom">
+                                        <button className="btn-details">View Details</button>
+                                        <button className="btn-accept">Accept Order</button>
+                                    </div>
                                 </div>
-                                <div className="job-item-bottom">
-                                    <button className="btn-details">View Details</button>
-                                    <button className="btn-accept">Accept Order</button>
-                                </div>
-                            </div>
+                                {index < jobRequests.length - 1 && (
+                                    <hr className="solid-separator" />
+                                )}
+                            </React.Fragment>
                         ))}
                     </div>
                 </div>
