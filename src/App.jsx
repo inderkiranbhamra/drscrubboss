@@ -74,9 +74,9 @@ const AppStyles = () => (
             display: flex; 
             justify-content: space-around; 
             align-items: center; 
-            box-shadow: 0 -1px 5px rgba(0,0,0,0.08);
+            box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
             z-index: 100; 
-            border-top: 1px solid #f0f0f0;
+            border-top: 1px solid #353535ff;
         }
         .bottom-nav button { 
             background: none; 

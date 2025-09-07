@@ -6,12 +6,13 @@ const ProfileScreenStyles = () => (
         :root {
             --text-dark: #1F2937;
             --text-light: #6B7280;
-            --bg-light: #F9FAFB; 
+            --screen-bg: #FFFFFF; 
+            --header-icon-bg: #F0F0F0; 
             --border-light: #E5E7EB;
         }
 
         body {
-            background-color: var(--bg-light);
+            background-color: var(--screen-bg); 
             margin: 0;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             -webkit-font-smoothing: antialiased;
@@ -20,12 +21,12 @@ const ProfileScreenStyles = () => (
 
         .profile-screen-container {
             padding: 20px 15px;
-            background-color: var(--bg-light);
+            background-color: var(--screen-bg); 
             min-height: 100vh;
         }
 
         .user-info-card {
-            background-color: #fff;
+            background-color: var(--header-icon-bg); 
             border-radius: 16px;
             padding: 20px;
             display: flex;
@@ -80,18 +81,18 @@ const ProfileScreenStyles = () => (
         .menu-item {
             display: flex;
             align-items: center;
-            padding: 12px 15px;
+            padding: 15px 0;
             gap: 20px;
             cursor: pointer;
         }
-
+        
         .menu-icon-container {
             width: 40px;
             height: 40px;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #fff;
+            background-color: var(--header-icon-bg); 
             border-radius: 8px;
             border: 1px solid var(--border-light);
             color: var(--text-light);
