@@ -13,7 +13,6 @@ import { BsPerson, BsPersonFill } from 'react-icons/bs';
 
 const AppStyles = () => (
     <style>{`
-        /* General App Styles */
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
         :root {
@@ -63,7 +62,6 @@ const AppStyles = () => (
             object-fit: contain;
         }
 
-        /* --- EDITED: Bottom Navigation Bar Styles --- */
         .bottom-nav { 
             position: fixed; 
             bottom: 0; 
@@ -88,7 +86,7 @@ const AppStyles = () => (
             flex-direction: column; 
             align-items: center; 
             justify-content: center; 
-            color: #4A5568; /* Darker gray for inactive text/icons */
+            color: #4A5568; 
             font-size: 24px; 
             height: 100%; 
             width: 25%; 
@@ -97,7 +95,7 @@ const AppStyles = () => (
             font-family: 'Roboto', sans-serif;
         }
         .bottom-nav button span { 
-            font-size: 12px; /* Adjusted font size */
+            font-size: 12px; 
             margin-top: 4px; 
             font-weight: 500;
         }
@@ -107,9 +105,9 @@ const AppStyles = () => (
         .bottom-nav button.active::after { 
             content: ''; 
             position: absolute; 
-            bottom: 0; /* Position at the very bottom */
-            left: 0; /* Align to the left edge of the button */
-            width: 100%; /* Span the full button width */
+            bottom: 0; 
+            left: 0; 
+            width: 100%; 
             height: 3px; 
             background-color: var(--primary-color);
         }
@@ -118,7 +116,6 @@ const AppStyles = () => (
 
 const SplashScreen = () => (
     <>
-        {/* Styles specific to the new Splash Screen. You can move this to your main stylesheet if you prefer. */}
         <style>{`
             .splash-screen-container {
                 display: flex;
@@ -195,7 +192,7 @@ const SplashScreen = () => (
             .splash-footer {
                 width: 100%;
                 padding: 20px 0;
-                font-weight: 700; /* Bold */
+                font-weight: 700; 
                 font-size: 1rem;
                 color: #212529;
             }

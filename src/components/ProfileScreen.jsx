@@ -1,5 +1,4 @@
 import React from 'react';
-// Importing necessary icons from react-icons
 import { FiEdit, FiHeadphones, FiMessageSquare, FiSettings, FiLogOut } from 'react-icons/fi';
 
 const ProfileScreenStyles = () => (
@@ -7,7 +6,7 @@ const ProfileScreenStyles = () => (
         :root {
             --text-dark: #1F2937;
             --text-light: #6B7280;
-            --bg-light: #F9FAFB; /* A slightly off-white for the background */
+            --bg-light: #F9FAFB; 
             --border-light: #E5E7EB;
         }
 
@@ -76,13 +75,11 @@ const ProfileScreenStyles = () => (
         .menu-options-list {
             display: flex;
             flex-direction: column;
-            /* Removed gap to tighten the list */
         }
 
         .menu-item {
             display: flex;
             align-items: center;
-            /* Reduced vertical padding */
             padding: 12px 15px;
             gap: 20px;
             cursor: pointer;
